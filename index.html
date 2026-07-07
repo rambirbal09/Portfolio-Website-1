@@ -2,9 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moncy Yohannan - Creative Developer | Designer</title>
+    <title>Prince Bal — Premium Video Editor for Creators & Brands</title>
+    <meta name="description" content="Prince Bal is a professional video editor specializing in YouTube long-form content, short-form reels, and podcast edits that drive views and grow audiences." />
+    <meta name="keywords" content="video editor, YouTube editor, reels editor, podcast editor, Prince Bal, content creator, video editing" />
+    <meta property="og:title" content="Prince Bal — Premium Video Editor" />
+    <meta property="og:description" content="Cinematic, high-retention edits for creators and brands who want to grow." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" href="/Favicon_1.png" />
+    <script>
+      window.addEventListener('load', function() {
+        var img = new Image();
+        img.src = '/Favicon_1.png';
+        img.onload = function() {
+          var canvas = document.createElement('canvas');
+          canvas.width = 64;
+          canvas.height = 64;
+          var ctx = canvas.getContext('2d');
+          var radius = 14;
+          ctx.beginPath();
+          ctx.moveTo(radius, 0);
+          ctx.lineTo(64 - radius, 0);
+          ctx.quadraticCurveTo(64, 0, 64, radius);
+          ctx.lineTo(64, 64 - radius);
+          ctx.quadraticCurveTo(64, 64, 64 - radius, 64);
+          ctx.lineTo(radius, 64);
+          ctx.quadraticCurveTo(0, 64, 0, 64 - radius);
+          ctx.lineTo(0, radius);
+          ctx.quadraticCurveTo(0, 0, radius, 0);
+          ctx.closePath();
+          ctx.clip();
+          ctx.drawImage(img, 0, 0, 64, 64);
+          var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+          link.type = 'image/png';
+          link.rel = 'shortcut icon';
+          link.href = canvas.toDataURL();
+          document.head.appendChild(link);
+        };
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
