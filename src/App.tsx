@@ -50,7 +50,7 @@ function Navbar() {
         <div className="nav-full-width">
           {/* Logo — far left */}
           <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/Logo_NoBG.png" alt="Prince Bal" className="nav-logo-img" />
+            <img src="/images/Profile_Picture.jpg" alt="Prince Bal" className="nav-logo-img" />
           </div>
 
           {/* Nav links — absolutely centered */}
@@ -285,9 +285,9 @@ function ResultsSection() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          countUp(viewsEl, 0, 2.4, 2000, 'M+')
-          countUp(followersEl, 0, 85, 2000, 'K+')
-          countUp(engagementEl, 0, 8.7, 2000, '%')
+          countUp(viewsEl, 0, 70, 2000, 'M+')
+          countUp(followersEl, 0, 150, 2000, 'K+')
+          countUp(engagementEl, 0, 11.4, 2000, '%')
 
           // Fade in the badges after 2000ms
           setTimeout(() => {
@@ -403,18 +403,18 @@ function ResultsSection() {
             <div className="fc-stats-row stats-container">
               <div className="fc-stat-box">
                 <div className="fc-stat-label">Views Gained</div>
-                <div className="fc-stat-value stats-views-value">2.4M+</div>
-                <div className="fc-stat-badge">+340%</div>
+                <div className="fc-stat-value stats-views-value">70M+</div>
+                <div className="fc-stat-badge">+580%</div>
               </div>
               <div className="fc-stat-box">
                 <div className="fc-stat-label">Follower Growth</div>
-                <div className="fc-stat-value stats-followers-value">85K+</div>
-                <div className="fc-stat-badge">+220%</div>
+                <div className="fc-stat-value stats-followers-value">150K+</div>
+                <div className="fc-stat-badge">+240%</div>
               </div>
               <div className="fc-stat-box">
                 <div className="fc-stat-label">Engagement Rate</div>
-                <div className="fc-stat-value stats-engagement-value">8.7%</div>
-                <div className="fc-stat-badge">+4x</div>
+                <div className="fc-stat-value stats-engagement-value">11.4%</div>
+                <div className="fc-stat-badge">+5x</div>
               </div>
             </div>
 
@@ -497,10 +497,6 @@ function YoutubeSection() {
   const { ref: featRef, visible: featVisible } = useRevealOnce()
   const { ref: moreRef, visible: moreVisible } = useRevealOnce()
 
-  const placeholders = [
-    { label: 'Coming Soon', title: 'New Video in Production' },
-    { label: 'Coming Soon', title: 'Upcoming Project Reveal' },
-  ]
 
   return (
     <section className="work-sub-section work-yt-section">
@@ -517,7 +513,7 @@ function YoutubeSection() {
           ref={featRef as React.RefObject<HTMLDivElement>}
           className={`yt-featured reveal reveal-delay-1 ${featVisible ? 'visible' : ''}`}
         >
-          <CustomVideoPlayer videoId="PpQTIDusrQI" title="Featured YouTube Video" aspectRatio="16/9" />
+          <CustomVideoPlayer videoId="XRPsoJeZ7XI" title="Featured YouTube Video" aspectRatio="16/9" />
         </div>
 
         {/* Placeholder cards */}
@@ -525,17 +521,24 @@ function YoutubeSection() {
           ref={moreRef as React.RefObject<HTMLDivElement>}
           className={`yt-placeholders reveal reveal-delay-2 ${moreVisible ? 'visible' : ''}`}
         >
-          {placeholders.map((p, i) => (
-            <div key={i} className="yt-placeholder-card">
-              <div className="yt-placeholder-thumb">
-                <div className="placeholder-play-btn" />
-                <div className="yt-coming-soon">{p.label}</div>
-              </div>
-              <div className="yt-placeholder-info">
-                <div className="yt-placeholder-title">{p.title}</div>
-              </div>
+          {/* First slot: Previous featured video moved down */}
+          <div className="yt-placeholder-card">
+            <CustomVideoPlayer videoId="PpQTIDusrQI" title="Salary Growth Story" aspectRatio="16/9" />
+            <div className="yt-placeholder-info">
+              <div className="yt-placeholder-title">Salary Growth Story</div>
             </div>
-          ))}
+          </div>
+
+          {/* Second slot: COMING SOON - untouched */}
+          <div className="yt-placeholder-card">
+            <div className="yt-placeholder-thumb">
+              <div className="placeholder-play-btn" />
+              <div className="yt-coming-soon">Coming Soon</div>
+            </div>
+            <div className="yt-placeholder-info">
+              <div className="yt-placeholder-title">Upcoming Project Reveal</div>
+            </div>
+          </div>
         </div>
 
         <div className="work-cta">
@@ -793,7 +796,7 @@ function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img src="/Logo_NoBG.png" alt="Prince Bal" className="footer-logo-img" />
+            <img src="/images/Profile_Picture.jpg" alt="Prince Bal" className="footer-logo-img" />
           </div>
           <div className="footer-copy">© 2026 Prince Bal. All rights reserved.</div>
           <div className="footer-links">
