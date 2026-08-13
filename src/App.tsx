@@ -50,7 +50,7 @@ function Navbar() {
         <div className="nav-full-width">
           {/* Logo — far left */}
           <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/images/Profile_Picture.jpg" alt="Prince Bal" className="nav-logo-img" />
+            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="nav-logo-img" />
           </div>
 
           {/* Nav links — absolutely centered */}
@@ -796,7 +796,7 @@ function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img src="/images/Profile_Picture.jpg" alt="Prince Bal" className="footer-logo-img" />
+            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="footer-logo-img" />
           </div>
           <div className="footer-copy">© 2026 Prince Bal. All rights reserved.</div>
           <div className="footer-links">
