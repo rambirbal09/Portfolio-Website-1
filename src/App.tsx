@@ -124,7 +124,7 @@ function HeroSection() {
           </h1>
 
           <p className="hero-subtitle">
-            Prince Bal is a professional video editor specializing in YouTube long-form content,
+            I am a professional video editor specializing in YouTube long-form content,
             short-form reels, and podcast edits that drive views and grow audiences.
           </p>
 
