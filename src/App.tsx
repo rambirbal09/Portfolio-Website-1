@@ -71,7 +71,7 @@ function Navbar() {
           {/* CTA — far right */}
           <div className="nav-right">
             <a href="https://lunacal.ai/princebal/meetings" target="_blank" rel="noopener noreferrer" className="nav-cta">
-              Book a Call →
+              <span>Book a Call →</span>
             </a>
             <div className="nav-hamburger" onClick={() => setMobileOpen(true)}>
               <span /><span /><span />
@@ -92,7 +92,7 @@ function Navbar() {
           <a key={id} href={`#${id}`} onClick={(e) => { e.preventDefault(); navTo(id) }}>{label}</a>
         ))}
         <a href="https://lunacal.ai/princebal/meetings" target="_blank" rel="noopener noreferrer" className="btn-primary mobile-nav-cta">
-          Book a Call →
+          <span>Book a Call →</span>
         </a>
       </div>
     </>
