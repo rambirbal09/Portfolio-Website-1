@@ -317,21 +317,29 @@ main {
    ============================================= */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  width: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   z-index: 1000;
   height: 64px;
   display: flex;
   align-items: center;
+  background: rgba(10, 14, 26, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   transition: all var(--transition-smooth);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 14, 26, 0.94);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(30, 41, 59, 0.6);
+  background: rgba(10, 14, 26, 0.92);
+  border: 1px solid rgba(30, 136, 229, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   height: 64px;
 }
 
@@ -1712,6 +1720,9 @@ main {
     padding: 0 24px;
   }
   .navbar {
+    top: 16px;
+    left: 16px;
+    right: 16px;
     height: 56px;
   }
   .navbar.scrolled {
