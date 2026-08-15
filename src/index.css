@@ -318,10 +318,10 @@ main {
 .navbar {
   position: fixed;
   top: 24px;
-  left: 24px;
-  right: 24px;
-  width: auto;
-  max-width: 1200px;
+  left: 0;
+  right: 0;
+  width: 58%;
+  max-width: 960px;
   margin: 0 auto;
   z-index: 1000;
   height: 54px;
@@ -1737,6 +1737,7 @@ main {
     top: 16px;
     left: 16px;
     right: 16px;
+    width: auto;
     height: 56px;
   }
   .navbar.scrolled {
