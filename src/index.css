@@ -257,8 +257,8 @@ main {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(30, 136, 229, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 0 24px rgba(30, 136, 229, 0.45);
 }
 
 .btn-primary:hover::after { opacity: 1; }
@@ -432,8 +432,8 @@ main {
 }
 
 .nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(30, 136, 229, 0.45);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(30, 136, 229, 0.4);
 }
 
 .nav-hamburger {
