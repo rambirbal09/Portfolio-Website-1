@@ -324,23 +324,23 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   z-index: 1000;
-  height: 64px;
+  height: 54px;
   display: flex;
   align-items: center;
-  background: rgba(10, 14, 26, 0.75);
+  background: rgba(10, 14, 26, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 9999px;
+  border-radius: 16px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   transition: all var(--transition-smooth);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 14, 26, 0.92);
+  background: rgba(10, 14, 26, 0.88);
   border: 1px solid rgba(30, 136, 229, 0.2);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-  height: 64px;
+  height: 54px;
 }
 
 /* Spread navbar — logo left, links centered, CTA right (Revamp Media style) */
@@ -349,7 +349,8 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 40px;
+  height: 100%;
+  padding: 0 28px;
   position: relative;
 }
 
@@ -364,6 +365,19 @@ main {
   align-items: center;
   cursor: pointer;
   user-select: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  letter-spacing: -0.01em;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-logo-text:hover {
+  opacity: 0.85;
 }
 
 .nav-logo-img {

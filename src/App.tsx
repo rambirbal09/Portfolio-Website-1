@@ -50,7 +50,7 @@ function Navbar() {
         <div className="nav-full-width">
           {/* Logo — far left */}
           <div className="nav-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="nav-logo-img" />
+            <span className="nav-logo-text">Prince Bal</span>
           </div>
 
           {/* Nav links — absolutely centered */}
