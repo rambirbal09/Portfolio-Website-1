@@ -448,7 +448,7 @@ function ReelsSection() {
       <div className="container">
         <div
           ref={headRef as React.RefObject<HTMLDivElement>}
-          className={`reveal ${headVisible ? 'visible' : ''}`}
+          className={`work-header reveal ${headVisible ? 'visible' : ''}`}
           style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '48px' }}
         >
           <div className="glass-section-label">

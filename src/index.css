@@ -2087,6 +2087,13 @@ main {
   }
   h3, .work-subsection-heading {
     font-size: 18px !important;
+    margin-bottom: 16px !important;
+  }
+  .work-header {
+    margin-bottom: 24px !important;
+  }
+  .work-sub-section .glass-section-label {
+    margin-bottom: 12px !important;
   }
   p {
     font-size: 14px !important;
