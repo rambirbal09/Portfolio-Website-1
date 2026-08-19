@@ -9,19 +9,15 @@
     <meta property="og:title" content="Prince Bal — Premium Video Editor" />
     <meta property="og:description" content="Cinematic, high-retention edits for creators and brands who want to grow." />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload critical fonts for instant FCP/LCP painting -->
+    <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <!-- Preload critical above-the-fold hero image assets to optimize LCP -->
     <link rel="preload" href="/images/client-keshav.avif" as="image" type="image/avif" />
     <link rel="preload" href="/images/client-govind.avif" as="image" type="image/avif" />
     <link rel="preload" href="/images/client-scaler.avif" as="image" type="image/avif" />
     <link rel="icon" type="image/png" href="/Favicon_1.png" />
     <link rel="apple-touch-icon" href="/Favicon_1.png" />
-    <!-- Load Poppins and Inter asynchronously to prevent render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-    </noscript>
     <script>
       window.addEventListener('load', function() {
         var img = new Image();
