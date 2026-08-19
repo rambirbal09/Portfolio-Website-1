@@ -2087,13 +2087,18 @@ main {
   }
   h3, .work-subsection-heading {
     font-size: 18px !important;
-    margin-bottom: 16px !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
   }
   .work-header {
-    margin-bottom: 24px !important;
+    margin-bottom: 16px !important;
+  }
+  .work-header .section-headline {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
   .work-sub-section .glass-section-label {
-    margin-bottom: 12px !important;
+    margin-bottom: 6px !important;
   }
   p {
     font-size: 14px !important;
