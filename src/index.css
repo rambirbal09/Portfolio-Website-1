@@ -1840,9 +1840,14 @@ main {
 /* Mobile specific overrides (max-width: 767px) */
 @media (max-width: 767px) {
   /* Global section spacing */
-  .hero, .results, .work-sub-section, .about, .reviews, .contact {
+  .results, .work-sub-section, .about, .reviews, .contact {
     padding-top: 60px !important;
     padding-bottom: 60px !important;
+  }
+  .hero {
+    min-height: auto !important;
+    padding-top: 110px !important;
+    padding-bottom: 70px !important;
   }
   .container {
     padding-left: 16px !important;
