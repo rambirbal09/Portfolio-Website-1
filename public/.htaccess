@@ -1,4 +1,23 @@
-# Caching Headers for Apache / Hostinger Static Hosting
+# Caching Headers & Server Optimizations for Apache / Hostinger Static Hosting
+
+# ----------------------------------------------------------------------
+# | MIME Types                                                         |
+# ----------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
+
+# ----------------------------------------------------------------------
+# | CORS Headers (Cross-Origin Resource Sharing)                       |
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+  # Enable CORS for fonts and preloaded media to prevent double-downloads
+  <FilesMatch "\.(ttf|otf|eot|woff2?|avif|webp|png|jpe?g|gif|ico|svg)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Browser Caching (Expires Headers)                                  |
@@ -11,6 +30,7 @@
   ExpiresByType text/css                              "access plus 1 year"
   ExpiresByType application/javascript                "access plus 1 year"
   ExpiresByType text/javascript                       "access plus 1 year"
+  ExpiresByType application/x-javascript              "access plus 1 year"
 
   # Images
   ExpiresByType image/avif                            "access plus 1 year"
