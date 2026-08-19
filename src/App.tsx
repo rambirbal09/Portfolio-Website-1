@@ -205,12 +205,12 @@ function HeroSection() {
    ============================================= */
 function CustomVideoPlayer({ videoId, title, aspectRatio = '9/16' }: { videoId: string; title: string; aspectRatio?: '9/16' | '16/9' }) {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [imgSrc, setImgSrc] = useState(`https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`)
+  const [imgSrc, setImgSrc] = useState(`/images/thumbnails/${videoId}.avif`)
 
   const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0&controls=1&autoplay=1&iv_load_policy=3`
 
   useEffect(() => {
-    setImgSrc(`https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`)
+    setImgSrc(`/images/thumbnails/${videoId}.avif`)
     setIsPlaying(false)
   }, [videoId])
 
@@ -243,7 +243,7 @@ function CustomVideoPlayer({ videoId, title, aspectRatio = '9/16' }: { videoId: 
         loading="lazy"
         width={aspectRatio === '16/9' ? 640 : 360}
         height={aspectRatio === '16/9' ? 360 : 640}
-        onError={() => setImgSrc(`https://i.ytimg.com/vi_webp/${videoId}/hqdefault.webp`)}
+        onError={() => setImgSrc(`https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`)}
       />
       
       {/* Custom play button overlay */}
