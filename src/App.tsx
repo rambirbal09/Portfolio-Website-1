@@ -34,7 +34,10 @@ function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 60
+      setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev))
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -235,6 +238,7 @@ function CustomVideoPlayer({ videoId, title, aspectRatio = '9/16' }: { videoId: 
         className="video-thumbnail" 
         src={imgSrc} 
         alt={title}
+        loading="lazy"
         onError={() => setImgSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`)}
       />
       
@@ -354,7 +358,7 @@ function ResultsSection() {
 
             {/* Profile badge top-right */}
             <div className="fc-profile-badge">
-              <img src="/images/client-keshav.jpg" alt="Keshav Grower" className="fc-badge-avatar" />
+              <img src="/images/client-keshav.jpg" alt="Keshav Grower" className="fc-badge-avatar" loading="lazy" />
               <div className="fc-badge-text">
                 <div className="fc-badge-name">
                   Keshav Grower
@@ -605,7 +609,7 @@ function AboutSection() {
             ref={rightRef as React.RefObject<HTMLDivElement>}
             className={`about-card-visual reveal reveal-delay-2 ${rightVisible ? 'visible' : ''}`}
           >
-            <img className="about-profile-img" src="/images/Profile_Picture.jpg" alt="Prince Bal" />
+            <img className="about-profile-img" src="/images/Profile_Picture.jpg" alt="Prince Bal" loading="lazy" />
           </div>
         </div>
       </div>
@@ -656,7 +660,7 @@ function ReviewCard({ review: r, delay }: { review: ReviewData; delay: number })
       className={`review-card reveal reveal-delay-${delay} ${visible ? 'visible' : ''}`}
     >
       <div className="review-header">
-        <img src={r.img} alt={r.name} className="review-avatar" />
+        <img src={r.img} alt={r.name} className="review-avatar" loading="lazy" />
         <div>
           <div className="review-name">
             {r.name}
@@ -796,7 +800,7 @@ function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="footer-logo-img" />
+            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="footer-logo-img" loading="lazy" />
           </div>
           <div className="footer-copy">© 2026 Prince Bal. All rights reserved.</div>
           <div className="footer-links">
