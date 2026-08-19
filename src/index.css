@@ -2063,8 +2063,9 @@ main {
     line-height: 1.6 !important;
   }
   .contact-btn {
-    width: 100% !important;
-    max-width: 280px !important;
+    width: 190px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     margin: 0 auto !important;
     justify-content: center !important;
   }
