@@ -2041,9 +2041,10 @@ main {
     margin-bottom: 12px !important;
   }
   .results .section-headline {
-    font-size: 26px !important;
+    font-size: clamp(19px, 5.3vw, 22px) !important;
     line-height: 1.3 !important;
     margin-bottom: 18px !important;
+    white-space: nowrap !important;
   }
   .results-cta {
     align-self: center !important;
