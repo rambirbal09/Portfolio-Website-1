@@ -2128,4 +2128,15 @@ main {
     font-size: 14px !important;
     line-height: 1.6 !important;
   }
+
+  /* Speed up visual completes for better mobile Speed Index */
+  .reveal {
+    transition-duration: 0.35s !important;
+    transform: translateY(12px) !important;
+  }
+  .reveal-delay-1 { transition-delay: 0.04s !important; }
+  .reveal-delay-2 { transition-delay: 0.08s !important; }
+  .reveal-delay-3 { transition-delay: 0.12s !important; }
+  .reveal-delay-4 { transition-delay: 0.16s !important; }
+  .reveal-delay-5 { transition-delay: 0.20s !important; }
 }
