@@ -73,7 +73,7 @@ function Navbar() {
             <a href="https://lunacal.ai/princebal/meetings" target="_blank" rel="noopener noreferrer" className="nav-cta">
               <span>Book a Call →</span>
             </a>
-            <div className="nav-hamburger" onClick={() => setMobileOpen(true)}>
+            <div className="nav-hamburger" onClick={() => setMobileOpen(!mobileOpen)}>
               <span /><span /><span />
             </div>
           </div>
