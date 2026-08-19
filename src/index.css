@@ -1870,7 +1870,8 @@ main {
     gap: 12px !important;
     width: 100% !important;
   }
-  .hero-actions button {
+  .hero-actions button,
+  .hero-actions a {
     width: 100% !important;
     max-width: 280px !important;
     margin: 0 auto !important;
