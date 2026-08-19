@@ -153,19 +153,19 @@ function HeroSection() {
             <div className="trusted-by-cards">
               {[
                 {
-                  img: '/images/client-keshav.jpg',
+                  img: '/images/client-keshav.avif',
                   name: 'Keshav Grower',
                   role: 'Content Creator',
                   followers: '155K Followers',
                 },
                 {
-                  img: '/images/client-govind.jpg',
+                  img: '/images/client-govind.avif',
                   name: 'Govind Rai',
                   role: 'Content Creator',
                   followers: '27K Followers',
                 },
                 {
-                  img: '/images/client-scaler.jpg',
+                  img: '/images/client-scaler.avif',
                   name: 'Scaler School of Business',
                   role: 'Business School',
                   followers: '30K Followers',
@@ -176,6 +176,8 @@ function HeroSection() {
                     src={client.img}
                     alt={client.name}
                     className="trusted-client-avatar"
+                    width="48"
+                    height="48"
                   />
                   <div className="trusted-client-info">
                     <div className="trusted-client-name">
@@ -239,6 +241,8 @@ function CustomVideoPlayer({ videoId, title, aspectRatio = '9/16' }: { videoId: 
         src={imgSrc} 
         alt={title}
         loading="lazy"
+        width={aspectRatio === '16/9' ? 640 : 360}
+        height={aspectRatio === '16/9' ? 360 : 640}
         onError={() => setImgSrc(`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`)}
       />
       
@@ -358,7 +362,7 @@ function ResultsSection() {
 
             {/* Profile badge top-right */}
             <div className="fc-profile-badge">
-              <img src="/images/client-keshav.jpg" alt="Keshav Grower" className="fc-badge-avatar" loading="lazy" />
+              <img src="/images/client-keshav.avif" alt="Keshav Grower" className="fc-badge-avatar" loading="lazy" width="32" height="32" />
               <div className="fc-badge-text">
                 <div className="fc-badge-name">
                   Keshav Grower
@@ -609,7 +613,7 @@ function AboutSection() {
             ref={rightRef as React.RefObject<HTMLDivElement>}
             className={`about-card-visual reveal reveal-delay-2 ${rightVisible ? 'visible' : ''}`}
           >
-            <img className="about-profile-img" src="/images/Profile_Picture.jpg" alt="Prince Bal" loading="lazy" />
+            <img className="about-profile-img" src="/images/Profile_Picture.avif" alt="Prince Bal" loading="lazy" width="420" height="525" />
           </div>
         </div>
       </div>
@@ -625,28 +629,28 @@ const reviews = [
     name: 'Keshav Grower',
     handle: '@keshavgrower',
     followers: '155K Followers',
-    img: '/images/1.jpg',
+    img: '/images/1.avif',
     quote: 'Prince transformed our content quality completely. Our reels started performing 3x better after working with him. The retention-focused editing style made all the difference.',
   },
   {
     name: 'Govind Rai',
     handle: '@ca_govindrai',
     followers: '27K Followers',
-    img: '/images/2.jpg',
+    img: '/images/2.avif',
     quote: 'Incredible attention to detail. Prince understands finance content and makes it engaging and visual. Our complex tax topics finally became watchable — and viral.',
   },
   {
     name: 'Scaler School Of Business',
     handle: '@scalerschool_of_business',
     followers: '30K Followers',
-    img: '/images/3.jpg',
+    img: '/images/3.avif',
     quote: 'Professional, fast, and creative. Our business content has never looked this good. Prince delivers premium quality consistently, every single time.',
   },
   {
     name: 'Mehakdeep Singh',
     handle: '@mehak.shokar',
     followers: '5.5K Followers',
-    img: '/images/6.jpg',
+    img: '/images/6.avif',
     quote: "Prince transformed my reels completely — clean edits, fast-paced, and high retention. My engagement shot up after just the first few videos. Highly recommend.",
   },
 ]
@@ -660,7 +664,7 @@ function ReviewCard({ review: r, delay }: { review: ReviewData; delay: number })
       className={`review-card reveal reveal-delay-${delay} ${visible ? 'visible' : ''}`}
     >
       <div className="review-header">
-        <img src={r.img} alt={r.name} className="review-avatar" loading="lazy" />
+        <img src={r.img} alt={r.name} className="review-avatar" loading="lazy" width="52" height="52" />
         <div>
           <div className="review-name">
             {r.name}
@@ -800,7 +804,7 @@ function Footer() {
       <div className="container">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img src="/images/nav_avatar.jpg" alt="Prince Bal" className="footer-logo-img" loading="lazy" />
+            <img src="/images/nav_avatar.avif" alt="Prince Bal" className="footer-logo-img" loading="lazy" width="44" height="44" />
           </div>
           <div className="footer-copy">© 2026 Prince Bal. All rights reserved.</div>
           <div className="footer-links">
