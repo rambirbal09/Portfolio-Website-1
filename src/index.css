@@ -2027,13 +2027,15 @@ main {
   /* Results header mobile alignment */
   .results-header {
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     gap: 0 !important;
     width: 100% !important;
   }
   .results-header-left {
     width: 100% !important;
     margin-bottom: 0 !important;
+    align-items: center !important;
+    text-align: center !important;
   }
   .results .glass-section-label {
     margin-bottom: 12px !important;
@@ -2044,8 +2046,12 @@ main {
     margin-bottom: 18px !important;
   }
   .results-cta {
-    align-self: flex-start !important;
+    align-self: center !important;
+    width: 190px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     margin-top: 0 !important;
+    justify-content: center !important;
   }
 
   /* Contact and Footer centering on mobile */
